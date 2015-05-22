@@ -1,4 +1,4 @@
-from random import randint
+#from random import randint
 
 # Generates a number from 1 through 10 inclusive
 random_number = randint(1, 10)
