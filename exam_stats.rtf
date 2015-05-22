@@ -1,0 +1,40 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5]\
+\
+def print_grades(grades):\
+    for grade in grades:\
+        print "Grades:", grade\
+\
+def grades_sum(grades):\
+    total = 0\
+    for grade in grades: \
+        total += grade\
+    return total\
+    \
+def grades_average(grades):\
+    sum_of_grades = grades_sum(grades)\
+    average = sum_of_grades / float(len(grades))\
+    return average\
+\
+def grades_variance(scores):\
+    average = grades_average(scores)\
+    variance = 0\
+    for score in scores:\
+        variance += (average - score) ** 2\
+        \
+    return(variance / float(len(scores)))\
+    \
+def grades_std_deviation(variance):\
+    return( variance ** 0.5)\
+    \
+print_grades(grades)\
+print "Sum of grades:", grades_sum(grades)\
+print "Grade average:", grades_average(grades)\
+variance = grades_variance(grades)  \
+print "variance:", variance\
+print "Standard deviation : ", grades_std_deviation(variance)  }
